@@ -1,0 +1,4 @@
+1. Take the wallet address and go the telegram bot and get the inscription JSON file.
+2. Now the ordering in the inscription JSON file is not correct.
+   You will need to reorder it according to the order in the excel file.
+   To re-order, you need the ability to change the orders of the inscriptions.

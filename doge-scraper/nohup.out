@@ -1,0 +1,33 @@
+2024-05-19 22:58:48,622 - apscheduler.scheduler - INFO - Scheduler started
+2024-05-19 23:07:23,433 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/telegram/ext/dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/usr/local/lib/python3.8/dist-packages/telegram/ext/handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "main.py", line 117, in list_collection
+    update.message.reply_text(f"Fetching inscriptions data for {collection_name}... Skip: {skip}, Limit: {limit}")
+  File "/usr/local/lib/python3.8/dist-packages/telegram/message.py", line 636, in reply_text
+    return self.bot.send_message(
+  File "/usr/local/lib/python3.8/dist-packages/telegram/bot.py", line 126, in decorator
+    result = func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/telegram/bot.py", line 474, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/telegram/bot.py", line 295, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/telegram/bot.py", line 258, in _post
+    return self.request.post(
+  File "/usr/local/lib/python3.8/dist-packages/telegram/utils/request.py", line 349, in post
+    result = self._request_wrapper(
+  File "/usr/local/lib/python3.8/dist-packages/telegram/utils/request.py", line 272, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Not enough rights to send text messages to the chat
+2024-05-19 23:17:35,695 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/telegram/ext/dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/usr/local/lib/python3.8/dist-packages/telegram/ext/handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "main.py", line 45, in unknown_command
+    update.message.reply_text("Sorry, I didn't understand that command., please use /help to get a list of commands.")
+AttributeError: 'NoneType' object has no attribute 'reply_text'
